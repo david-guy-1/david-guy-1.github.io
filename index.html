@@ -1,0 +1,28 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+<script type="text/javascript">
+
+	document.write(window.location.href)
+	window.parent.postMessage(window.location.href, "*")
+	
+//	window.parent.postMessage("this is a test", "*")
+
+	
+	
+window.addEventListener("message", function(message){
+    var data = message.data;
+	document.open();
+	document.write(data);
+})
+
+
+</script>
+</body>
+</html>
+
+
